@@ -1,1 +1,39 @@
-<h3 class="col-sm-7">You're currently in the Conferences Page</h3>
+<div>
+  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <h3 style="text-align: center">You're currently in the Conferences Page</h3>
+    <hr />
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+        <input
+          type="text"
+          name="filterConference"
+          [(ngModel)]="filterConference"
+          placeholder="Search your conference..."
+        />
+        <hr />
+        <ul class="list-group">
+          <div>
+            <strong>Conf. Title</strong> | Author | Place | Date |
+            <span class="badge"> Relevance </span>|
+            <p></p>
+          </div>
+
+          <li
+            class="list-group-item"
+            *ngFor="let conference of conferences | filter: filterConference"
+            [ngClass]="getStatusClasses(conference)"
+          >
+            <span class="badge">
+              {{ conference.relevance | uppercase }}
+            </span>
+            <strong>"{{ conference.name }}"</strong> | by:
+            {{ conference.author }} | {{ conference.place }} |
+            {{ conference.date | date: "LLL dd, yyy. hh:mm aaa" }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

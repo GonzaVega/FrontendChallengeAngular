@@ -1,10 +1,5 @@
 @import url("https://fonts.google.com/specimen/Oswald?query=Oswald");
 @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
-h3 {
+div {
   font-family: Oswald;
-  color: rgb(36, 24, 82);
-  text-align: center;
-  border-style: solid;
-  border-width: 5px;
-  border-color: blue;
 }

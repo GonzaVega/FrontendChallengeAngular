@@ -6,9 +6,10 @@ import { HeaderComponent } from './header/header.component';
 import { ConferencesComponent } from './conferences/conferences.component';
 import { AboutComponent } from './about/about.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FilterPipe } from './filter.pipe';
 
 const appRoutes: Routes = [
-  // { path: '', component: HeaderComponent },
   {
     path: 'Conferences',
     component: ConferencesComponent,
@@ -26,8 +27,14 @@ const appRoutes: Routes = [
     HeaderComponent,
     ConferencesComponent,
     AboutComponent,
+    FilterPipe,
   ],
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    ReactiveFormsModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

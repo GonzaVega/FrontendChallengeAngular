@@ -15,3 +15,6 @@ nav {
 h2 {
   text-align: center;
 }
+nav {
+  text-shadow: 1px 1px cornsilk;
+}

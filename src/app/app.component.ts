@@ -7,15 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FrontEnd-Challenge';
-  // isLoggedIn = true;
 
   constructor() {}
 
   ngOnInit(): void {}
-  // onLogIn() {
-  //   this.isLoggedIn = false;
-  // }
-  // onLogOut() {
-  //   this.isLoggedIn = true;
-  // }
 }
