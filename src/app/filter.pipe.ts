@@ -25,5 +25,5 @@ export class FilterPipe implements PipeTransform {
       }
     }
     return resultConferences;
-  }
+  }  
 }
